@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GooglePlay | kitatas</title>
+    <link>https://kitatas.github.io/tag/googleplay/</link>
+      <atom:link href="https://kitatas.github.io/tag/googleplay/index.xml" rel="self" type="application/rss+xml" />
+    <description>GooglePlay</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kitatas.github.io/media/icon_hu7a87387444e1787676f8e312a44a4eea_105778_512x512_fill_lanczos_center_2.png</url>
+      <title>GooglePlay</title>
+      <link>https://kitatas.github.io/tag/googleplay/</link>
+    </image>
+    
+    <item>
+      <title>Push&amp;Stop</title>
+      <link>https://kitatas.github.io/project/push_and_flag/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://kitatas.github.io/project/push_and_flag/</guid>
+      <description>&lt;p&gt;押して止めてゴールを目指すパズルゲームです&lt;/p&gt;
+&lt;p&gt;📱 &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.KitaLab.PushStop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GooglePlay&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
