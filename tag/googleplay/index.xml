@@ -5,7 +5,7 @@
     <link>https://kitatas.github.io/tag/googleplay/</link>
       <atom:link href="https://kitatas.github.io/tag/googleplay/index.xml" rel="self" type="application/rss+xml" />
     <description>GooglePlay</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 kitatas.</copyright><lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kitatas.github.io/media/icon_hu7a87387444e1787676f8e312a44a4eea_105778_512x512_fill_lanczos_center_2.png</url>
       <title>GooglePlay</title>
@@ -14,11 +14,12 @@
     
     <item>
       <title>Push&amp;Stop</title>
-      <link>https://kitatas.github.io/project/push_and_flag/</link>
+      <link>https://kitatas.github.io/project/push_and_stop/</link>
       <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://kitatas.github.io/project/push_and_flag/</guid>
+      <guid>https://kitatas.github.io/project/push_and_stop/</guid>
       <description>&lt;p&gt;押して止めてゴールを目指すパズルゲームです&lt;/p&gt;
-&lt;p&gt;📱 &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.KitaLab.PushStop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GooglePlay&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🎮 &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.KitaLab.PushStop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GooglePlay&lt;/a&gt;&lt;br&gt;
+📝 &lt;a href=&#34;https://github.com/kitatas/Push-and-Stop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

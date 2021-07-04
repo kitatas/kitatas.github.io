@@ -5,7 +5,7 @@
     <link>https://kitatas.github.io/categories/</link>
       <atom:link href="https://kitatas.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 kitatas.</copyright>
     <image>
       <url>https://kitatas.github.io/media/icon_hu7a87387444e1787676f8e312a44a4eea_105778_512x512_fill_lanczos_center_2.png</url>
       <title>Categories</title>
