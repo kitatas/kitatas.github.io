@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
 	<meta name="generator" content="Hugo 0.84.4" /><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 <link rel="icon" href=https://github.com/kitatas.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
 
 
 <link rel="stylesheet" href="/css/font.css" media="all">
@@ -30,9 +40,7 @@
 <meta name="twitter:description" content="kita&#39;s Profile"/>
 
 
-
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all">
-<link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
 <link rel="stylesheet" href="/css/footer.css" media="all">
 
 
@@ -64,15 +72,41 @@
         line-height: 1.5;
         text-align: left;
     }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
 </style>
+
 
 <meta name="description" content=kita&#39;s&#32;Profile>
 <link rel="stylesheet" href="/css/index.css" media="all">
-<link rel="stylesheet" href="/css/games.css" media="all">
-<link rel="stylesheet" href="/css/others.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 
 
-<script defer src="/fontawesome-5/all-5.15.4.js"></script>
+<script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
   <title>
 kita&#39;s Profile
@@ -80,25 +114,58 @@ kita&#39;s Profile
   </title>
 </head>
 
-<body class="light" onload="loading()">
+<body class="light">
   
   
-  <script src="/bootstrap-5/js/bootstrap.bundle.js"></script>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
+    switch (localStorageValue) {
+        case "dark":
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.body.classList.add('dark');
+            }
+            break;
+    }
 </script>
 
 
 
-<header>
-    <nav class="pt-3 navbar navbar-expand-lg">
+
+<script>
+    var prevScrollPos = window.pageYOffset;
+    window.addEventListener("scroll", function showHeaderOnScroll() {
+        let profileHeaderElem = document.getElementById("profileHeader");
+        let currentScrollPos = window.pageYOffset;
+        let resetHeaderStyle = false;
+        let showNavBarOnScrollUp =  true ;
+        let showNavBar = showNavBarOnScrollUp ? prevScrollPos > currentScrollPos : currentScrollPos > 0;
+        if (showNavBar) {
+            profileHeaderElem.classList.add("showHeaderOnTop");
+        } else {
+            resetHeaderStyle = true;
+        }
+        if(currentScrollPos === 0) {
+            resetHeaderStyle = true;
+        }
+        if(resetHeaderStyle) {
+            profileHeaderElem.classList.remove("showHeaderOnTop");
+        }
+        prevScrollPos = currentScrollPos;        
+    });
+</script>
+
+
+
+<header id="profileHeader">
+    <nav class="pt-3 navbar navbar-expand-lg animate">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
             <a class="navbar-brand primary-font text-wrap" href="/">
@@ -108,6 +175,8 @@ kita&#39;s Profile
                 kita&#39;s Profile
                 
             </a>
+
+            
 
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -127,16 +196,22 @@ kita&#39;s Profile
                     
 
                     
+
+                    
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#games"
-                            aria-label="projects">Games</a>
+                            aria-label="games">
+                            Games
+                        </a>
                     </li>
                     
 
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#others"
-                           aria-label="projects">Others</a>
+                           aria-label="others">
+                            Others
+                        </a>
                     </li>
                     
 
@@ -146,30 +221,33 @@ kita&#39;s Profile
 
                     
                     
+
+                    
+                    <li class="nav-item navbar-text">
+                        
+                        <div class="text-center">
+                            <button id="theme-toggle">
+                                <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                                <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    
+
                 </ul>
 
-                
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
-                
             </div>
         </div>
     </nav>
@@ -178,7 +256,7 @@ kita&#39;s Profile
 <section id="hero" class="py-5 align-middle">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8 content" id="primary-font">
+            <div class="col-sm-12 col-md-12 col-lg-8 content animate" id="primary-font">
                 <span class="subtitle">
                     
                 </span>
@@ -202,7 +280,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                     <div class="col-auto h-100">
                         
                     </div>
-                    <div class="col-auto px-0 h-100"><span id="loading-icons" style="display: none;">
+                    <div class="col-auto px-0 h-100"><span>
     
     <span class="px-1">
         <a href="https://play.google.com/store/apps/developer?id=KitaLab" target="_blank" class="btn social-icon">
@@ -241,9 +319,9 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
-                    <div class="col-sm-12 col-md-9 pt-5 image px-5 px-md-5 px-lg-0 text-center">
-                        <img src="https://github.com/kitatas.png" 
-                            class="img-thumbnail mx-auto" 
+                    <div class="col-sm-12 col-md-9 pt-5 image animate px-5 px-md-5 px-lg-0 text-center">
+                        <img src="https://github.com/kitatas.png"
+                            class="img-thumbnail mx-auto"
                             alt=""
                         >
                     </div>
@@ -251,6 +329,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             </div>
         </div>
     </div>
+    
     <div class="hero-bottom-svg d-md-block d-lg-block d-none">
         <svg xmlns="http://www.w3.org/2000/svg" width="201" height="201" viewBox="0 0 201 201">
             <g id="Group_1168" data-name="Group 1168" transform="translate(-384 -1392)">
@@ -513,7 +592,9 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             </g>
         </svg>
     </div>
+    
 </section>
+
 
 
 <section id="games" class="py-5">
@@ -530,10 +611,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Route.Invent.Puzzle.
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">Route.Invent.Puzzle.</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Place Puzzle Game.</br>
                             Developed at GameOff2023 &#34;SCALE&#34;.</br>
@@ -581,10 +659,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            CommanDungeon
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">CommanDungeon</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Command Slot Game.</br>
                             Developed at unity1week "1ボタン".</br>
@@ -632,10 +707,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            シュウェイクコルク
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">シュウェイクコルク</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Casual Shake Game.</br>
                             Developed at unity1week "ふる".</br>
@@ -683,10 +755,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            グラナスドアライム
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">グラナスドアライム</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Words Slide Puzzle Game.</br>
                             Developed at unity1week "つたえる".</br>
@@ -722,10 +791,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Kakomi Monster
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">Kakomi Monster</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Surround Action Game.</br>
                             Now developing...</br>
@@ -744,10 +810,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            ReGOLF
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">ReGOLF</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Shot Puzzle Game.</br>
                             Developed at unity1week "Re".</br>
@@ -783,10 +846,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            SLOT MAN
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">SLOT MAN</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             2D Scroll Action Game.</br>
                             Developed at unity1week "そろえる".</br>
@@ -823,10 +883,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Ferret Forever
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">Ferret Forever</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Casual Run Game.</br>
                             Developed with suibotsutoshi.</br>
@@ -874,10 +931,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            ぷにフラ
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">ぷにフラ</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Rotation Puzzle Game.</br>
                             Developed at unity1week "回".</br>
@@ -925,10 +979,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            PlusMinus&#43;&#43;
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">PlusMinus&#43;&#43;</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Survival Competition Game.</br>
                             Developed at unity1week "正".</br>
@@ -964,10 +1015,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Dodzwei!!
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">Dodzwei!!</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Shooting Battle Game.</br>
                             Developed at unity1week "2".</br>
@@ -1003,10 +1051,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Push &amp; Stop
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">Push &amp; Stop</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Casual Puzzle Game.</br>
                         </div>
@@ -1047,10 +1092,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            一夜城バトル
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">一夜城バトル</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Collecting Battle Game.</br>
                             Developed at unity1week "あける".</br>
@@ -1080,10 +1122,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            フヤスフヤス
-                        </h5>
+                        <h5 class="card-title bg-transparent mt-1" style="text-align: center;">フヤスフヤス</h5>
                         <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
                             Stack Battle Game.</br>
                             Developed at unity1week "ふえる".</br>
@@ -1107,10 +1146,8 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             
         </div>
     </div>
-
-
-
 </section>
+
 
 <section id="others" class="py-5">
     <div class="container">
@@ -1126,11 +1163,8 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <div class="pb-2 bg-transparent">
                             
                         </div>
-
-                        <h5 class="card-title bg-transparent mt-1" style="text-align: center">
-                            Gaming Unity Editor
-                        </h5>
-                        <div class="card-text bg-transparent secondary-font" style="font-size: 0.95rem;">
+                        <h5 class="card-title bg-transparent mt-1">Gaming Unity Editor</h5>
+                        <div class="card-text bg-transparent secondary-font">
                             Letting UnityEditor be Gaming.</br>
                         </div>
                     </div>
@@ -1154,13 +1188,22 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
     </div>
 </section>
 
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
   </div><footer>
     
-
-
-
-
-
+ 
 
 <div class="text-center pt-2">
     
@@ -1176,12 +1219,12 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
             <div class="pb-2">
-                <a href="https://kitatas.github.io/" title="kita&#39;s Profile">
+                <a href="https://kitatas.github.io" title="kita&#39;s Profile">
                     <img alt="Footer logo" src="https://github.com/kitatas.png"
                         height="40px" width="40px">
                 </a>
             </div>
-            &copy; 2023  All Rights Reserved
+            &copy; 2024  All rights reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -1195,13 +1238,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             </div>
         </div>
     </div>
-</div></footer>
+</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
     } else if (localStorage.getItem("pref-theme") === "light") {
         document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
     }
 
@@ -1224,18 +1267,20 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
 
 </script>
 
-<script>
-    let loadingIcons;
 
-    function loading() {
-        myVar = setTimeout(showPage, 100);
-    }
 
-    function showPage() {
-        try{
-            document.getElementById("loading-icons").style.display = "block";
-        } catch(err) {}
-    }
-</script></body>
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
 
 </html>
