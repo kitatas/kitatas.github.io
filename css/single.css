@@ -116,6 +116,7 @@
   background-color: var(--secondary-color) !important;
   color: var(--text-secondary-color) !important;
   max-height: 450px;
+  font-size: 12px;
 }
 
 #single .page-content pre > code {
@@ -150,6 +151,10 @@
 #single .page-content ol li li, #single .page-content ul li li {
     margin-bottom: 0.5em;
     padding-left: 1.5em;
+}
+
+#single .page-content p {
+    font-size: 14px;
 }
 
 /* sidebar */
