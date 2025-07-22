@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,13 +45,11 @@
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -60,6 +58,7 @@
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -81,11 +80,11 @@
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -100,7 +99,12 @@
 </style>
 
 
+
 <meta name="description" content=kita&#39;s&#32;Profile>
+
+
+  
+  
 
   <title>
 kita&#39;s Profile | 404 page not found
@@ -109,7 +113,6 @@ kita&#39;s Profile | 404 page not found
 </head>
 
 <body class="light">
-  
   
   
 <script>
@@ -153,7 +156,7 @@ kita&#39;s Profile | 404 page not found
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -197,7 +200,7 @@ kita&#39;s Profile | 404 page not found
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#games"
-                            aria-label="games">
+                           aria-label="games">
                             Games
                         </a>
                     </li>
@@ -210,6 +213,8 @@ kita&#39;s Profile | 404 page not found
                             Others
                         </a>
                     </li>
+                    
+
                     
 
                     
@@ -250,14 +255,14 @@ kita&#39;s Profile | 404 page not found
     </nav>
 </header>
 
-  <div id="content">
+<div id="content">
 <div class="container py-5 text-center">
     <img src="/404.png" alt='404 page not found' class="img-fluid" width="40%">
     <h1>404 page not found</h1>
 </div>
 
   </div>
-  <footer>
+<footer>
     
  
 
@@ -274,13 +279,15 @@ kita&#39;s Profile | 404 page not found
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://kitatas.github.io" title="kita&#39;s Profile">
-                    <img alt="Footer logo" src="https://github.com/kitatas.png"
-                        height="40px" width="40px">
-                </a>
-            </div>
-            &copy; 2024  All Rights Reserved
+            
+                <div class="pb-2">
+                    <a href="https://kitatas.github.io" title="kita&#39;s Profile">
+                        <img alt="Footer logo" src="https://github.com/kitatas.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All Rights Reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -294,7 +301,9 @@ kita&#39;s Profile | 404 page not found
             </div>
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer>
+<script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');

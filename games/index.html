@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,13 +45,11 @@
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -60,6 +58,7 @@
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -81,11 +80,11 @@
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -100,11 +99,15 @@
 </style>
 
 
+
 <meta name="description" content="Games of kita&#39;s Profile">
-<link rel="stylesheet" href="/css/single.css">
-
-
+<link rel="stylesheet" href="/css/list.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
 
   <title>
 Games | kita&#39;s Profile
@@ -113,7 +116,6 @@ Games | kita&#39;s Profile
 </head>
 
 <body class="light">
-  
   
   
 <script>
@@ -157,7 +159,7 @@ Games | kita&#39;s Profile
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -201,7 +203,7 @@ Games | kita&#39;s Profile
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#games"
-                            aria-label="games">
+                           aria-label="games">
                             Games
                         </a>
                     </li>
@@ -214,6 +216,8 @@ Games | kita&#39;s Profile
                             Others
                         </a>
                     </li>
+                    
+
                     
 
                     
@@ -254,86 +258,557 @@ Games | kita&#39;s Profile
     </nav>
 </header>
 
-  <div id="content">
-<section id="single">
+<div id="content">
+<section id="games" class="py-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-12 col-lg-9">
-                <div class="pr-lg-4">
-                    <div class="title mb-5 px-4">
-                        <h1 class="text-center mb-4">Games</h1>
-
-                        <div class="py-3">
-                            <ul>
-                                
-                                
-                                <li>
-                                    <a href="/games/route_invent_puzzle">Route.Invent.Puzzle.</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/comman_dungeon">CommanDungeon</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/shuwake_cork">シュウェイクコルク</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/granasd_alime">グラナスドアライム</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/kakomi_monster">Kakomi Monster</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/re_golf">ReGOLF</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/slot_man">SLOT MAN</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/ferret_forever">FerretForever</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/puni_flag">ぷにフラ</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/plus_minus_pp">PlusMinus&#43;&#43;</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/dodzwei">Dodzwei!!</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/push_and_stop">Push &amp; Stop</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/one_night_castle_battle">一夜城バトル</a><br>
-                                </li>
-                                
-                                <li>
-                                    <a href="/games/huyasu_huyasu">フヤスフヤス</a><br>
-                                </li>
-                                
-                            </ul>
-                        </div>
+        <h2 class="text-center">Games</h2>
+        <div class="row justify-content-center px-3 px-md-5">
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="Route.Invent.Puzzle.">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/route_invent_puzzle/main.gif" alt="Route.Invent.Puzzle.">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">Route.Invent.Puzzle.</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.RIPuzzle" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://kitatas.itch.io/route-invent-puzzle" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-itch-io"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/Route-Invent-Puzzle" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/route_invent_puzzle">
+                                Know more
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="CommanDungeon">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/comman_dungeon/main.gif" alt="CommanDungeon">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">CommanDungeon</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.CommanDungeon" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/commandungeon" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/CommanDungeon" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/comman_dungeon">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="シュウェイクコルク">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/shuwake_cork/main.gif" alt="シュウェイクコルク">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">シュウェイクコルク</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.ShuwakeCork" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/shuwake_cork" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/ShuwakeCork" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/shuwake_cork">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="グラナスドアライム">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/granasd_alime/main.gif" alt="グラナスドアライム">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">グラナスドアライム</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/granasd_alime" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/unity1week_tsutaeru" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/granasd_alime">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="Kakomi Monster">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/kakomi_monster/main.gif" alt="Kakomi Monster">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">Kakomi Monster</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/kakomi_monster">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="ReGOLF">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/re_golf/main.gif" alt="ReGOLF">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">ReGOLF</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/re_golf" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/unity1week_re" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/re_golf">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="SLOT MAN">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/slot_man/main.gif" alt="SLOT MAN">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">SLOT MAN</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/slot_man" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/unity1week_soroeru" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/slot_man">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="FerretForever">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/ferret_forever/main.gif" alt="FerretForever">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">FerretForever</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.FerretForever" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/ferret-forever" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/FerretForever" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/ferret_forever">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="ぷにフラ">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/puni_flag/main.gif" alt="ぷにフラ">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">ぷにフラ</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.PuniFlag" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/puni_flag" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/PuniFlag" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/puni_flag">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="PlusMinus&#43;&#43;">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/plus_minus_pp/main.gif" alt="PlusMinus&#43;&#43;">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">PlusMinus&#43;&#43;</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/plus_minus_pp" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/unity1week_sei" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/plus_minus_pp">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="Dodzwei!!">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/dodzwei/main.gif" alt="Dodzwei!!">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">Dodzwei!!</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/dodzwei" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/unity1week_two" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/dodzwei">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="Push &amp; Stop">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/push_and_stop/main.gif" alt="Push &amp; Stop">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">Push &amp; Stop</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://play.google.com/store/apps/details?id=com.KitaLab.PushStop" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://github.com/kitatas/Push-and-Stop" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/push_and_stop">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="一夜城バトル">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/one_night_castle_battle/main.gif" alt="一夜城バトル">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">一夜城バトル</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/one_night_castle_battle" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/one_night_castle_battle">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3" style="min-height: 0" title="フヤスフヤス">
+                    <div class="card-head">
+                        <img class="card-img-top" src="/images/games/huyasu_huyasu/main.gif" alt="フヤスフヤス">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <h5 class="card-title bg-transparent mt-1 text-center">フヤスフヤス</h5>
+                    </div>
+                    <div class="card-footer py-3">
+                        
+                        
+                        <span class="m-1 mx-2">
+                            <a href="https://unityroom.com/games/huyasu_huyasu" target="_blank"  rel="noopener noreferrer" >
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        </span>
+                        
+                        
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="/games/huyasu_huyasu">
+                                Know more
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </div>
     </div>
 </section>
 
   </div>
-  <footer>
+<footer>
     
  
 
@@ -350,13 +825,15 @@ Games | kita&#39;s Profile
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://kitatas.github.io" title="kita&#39;s Profile">
-                    <img alt="Footer logo" src="https://github.com/kitatas.png"
-                        height="40px" width="40px">
-                </a>
-            </div>
-            &copy; 2024  All Rights Reserved
+            
+                <div class="pb-2">
+                    <a href="https://kitatas.github.io" title="kita&#39;s Profile">
+                        <img alt="Footer logo" src="https://github.com/kitatas.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All Rights Reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -370,7 +847,9 @@ Games | kita&#39;s Profile
             </div>
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer>
+<script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');

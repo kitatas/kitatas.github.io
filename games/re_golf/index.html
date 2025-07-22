@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,13 +45,11 @@
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -60,6 +58,7 @@
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -81,11 +80,11 @@
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -100,11 +99,15 @@
 </style>
 
 
+
 <meta name="description" content="ReGOLF of kita&#39;s Profile">
-<link rel="stylesheet" href="/css/single.css">
-
-
+<link rel="stylesheet" href="/css/list.css" media="all">
+<link rel="stylesheet" href="/css/projects.css" media="all">
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
 
   <title>
 ReGOLF | kita&#39;s Profile
@@ -113,7 +116,6 @@ ReGOLF | kita&#39;s Profile
 </head>
 
 <body class="light">
-  
   
   
 <script>
@@ -157,7 +159,7 @@ ReGOLF | kita&#39;s Profile
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -201,7 +203,7 @@ ReGOLF | kita&#39;s Profile
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#games"
-                            aria-label="games">
+                           aria-label="games">
                             Games
                         </a>
                     </li>
@@ -214,6 +216,8 @@ ReGOLF | kita&#39;s Profile
                             Others
                         </a>
                     </li>
+                    
+
                     
 
                     
@@ -254,56 +258,49 @@ ReGOLF | kita&#39;s Profile
     </nav>
 </header>
 
-  <div id="content">
-<section id="single">
+<div id="content">
+<section id="games" class="py-5">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-12 col-lg-9">
-                <div class="pr-lg-4">
-                    <div class="title mb-5 px-4">
-                        <h1 class="text-center mb-4">ReGOLF</h1>
-                        <img class="text-center pb-0" style="width: 100%;" src="/images/games/re_golf/main.gif" alt="">
-
-                        <div class="py-3">
-                            
-                            Shot Puzzle Game.<br>
-                            
-                            Developed at unity1week &#34;Re&#34;.<br>
-                            
-                        </div>
-
-                        
-                        <h2 class="text-right mx-auto">Play</h2>
-                        <hr>
-                        <div class="pb-3">
-                            
-                            <i class="fas fa-door-open"></i>&nbsp;&nbsp;<a href="https://unityroom.com/games/re_golf" target="_blank" rel="noopener noreferrer">unityroom</a><br>
-                            
-                        </div>
-                        
-
-                        
-                        <h2 class="text-right mx-auto">Information</h2>
-                        <hr>
-                        <div class="pb-3">
-                            
-                            <i class="fab fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/kitatas/unity1week_re" target="_blank" rel="noopener noreferrer">GitHub</a><br>
-                            
-                            <i class="fas fa-link"></i>&nbsp;&nbsp;<a href="/games/re_golf/credit" target="" >Credit</a><br>
-                            
-                            <i class="fas fa-link"></i>&nbsp;&nbsp;<a href="/games/re_golf/license" target="" >License</a><br>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
+        <h2 class="text-center">ReGOLF</h2>
+        <div class="row justify-content-center px-3 px-md-5">
+            <img class="text-center pb-0" style="width: 100%;" src="/images/games/re_golf/main.gif" alt="">
+            <div class="py-3">
+                
+                Shot Puzzle Game.<br>
+                
+                Developed at unity1week &#34;Re&#34;.<br>
+                
             </div>
+
+            
+            <hr>
+            <h3 class="">Play</h3>
+            <div class="py-3">
+                
+                <i class="fas fa-door-open"></i>&nbsp;&nbsp;<a href="https://unityroom.com/games/re_golf" target="_blank" rel="noopener noreferrer">unityroom</a><br>
+                
+            </div>
+            
+
+            
+            <hr>
+            <h3 class="">Information</h3>
+            <div class="py-3">
+                
+                <i class="fab fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/kitatas/unity1week_re" target="_blank" rel="noopener noreferrer">GitHub</a><br>
+                
+                <i class="fas fa-link"></i>&nbsp;&nbsp;<a href="/games/re_golf/credit" target="" rel="noopener noreferrer">Credit</a><br>
+                
+                <i class="fas fa-link"></i>&nbsp;&nbsp;<a href="/games/re_golf/license" target="" rel="noopener noreferrer">License</a><br>
+                
+            </div>
+            
         </div>
     </div>
 </section>
 
   </div>
-  <footer>
+<footer>
     
  
 
@@ -320,13 +317,15 @@ ReGOLF | kita&#39;s Profile
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://kitatas.github.io" title="kita&#39;s Profile">
-                    <img alt="Footer logo" src="https://github.com/kitatas.png"
-                        height="40px" width="40px">
-                </a>
-            </div>
-            &copy; 2024  All Rights Reserved
+            
+                <div class="pb-2">
+                    <a href="https://kitatas.github.io" title="kita&#39;s Profile">
+                        <img alt="Footer logo" src="https://github.com/kitatas.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All Rights Reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -340,7 +339,9 @@ ReGOLF | kita&#39;s Profile
             </div>
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer>
+<script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta name="generator" content="Hugo 0.84.4" /><meta charset="UTF-8">
@@ -46,13 +46,11 @@
 
 <link rel="stylesheet" href="/css/theme.css" media="all">
 
-
-
-
 <style>
     :root {
         --text-color: #343a40;
         --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
         --background-color: #eaedf0;
         --secondary-background-color: #64ffda1a;
         --primary-color: #007bff;
@@ -61,6 +59,7 @@
          
         --text-color-dark: #e4e6eb;
         --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
         --background-color-dark: #18191a;
         --secondary-background-color-dark: #212529;
         --primary-color-dark: #ffffff;
@@ -82,11 +81,11 @@
         width: 8px;
         background-color: var(--background-color);
     }
-    
+
     ::-webkit-scrollbar-track {
         border-radius: 1rem;
     }
-    
+
     ::-webkit-scrollbar-thumb {
         border-radius: 1rem;
         background: #b0b0b0;
@@ -101,12 +100,17 @@
 </style>
 
 
+
 <meta name="description" content=kita&#39;s&#32;Profile>
 <link rel="stylesheet" href="/css/index.css" media="all">
 <link rel="stylesheet" href="/css/projects.css" media="all">
 
 
 <script defer src="/fontawesome-6/all-6.4.2.js"></script>
+
+
+  
+  
 
   <title>
 kita&#39;s Profile
@@ -115,7 +119,6 @@ kita&#39;s Profile
 </head>
 
 <body class="light">
-  
   
   
 <script>
@@ -159,7 +162,7 @@ kita&#39;s Profile
         if(resetHeaderStyle) {
             profileHeaderElem.classList.remove("showHeaderOnTop");
         }
-        prevScrollPos = currentScrollPos;        
+        prevScrollPos = currentScrollPos;
     });
 </script>
 
@@ -203,7 +206,7 @@ kita&#39;s Profile
                     
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="/#games"
-                            aria-label="games">
+                           aria-label="games">
                             Games
                         </a>
                     </li>
@@ -216,6 +219,8 @@ kita&#39;s Profile
                             Others
                         </a>
                     </li>
+                    
+
                     
 
                     
@@ -256,7 +261,7 @@ kita&#39;s Profile
     </nav>
 </header>
 
-  <div id="content">
+<div id="content">
 <section id="hero" class="py-5 align-middle">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
         <div class="row">
@@ -264,19 +269,19 @@ kita&#39;s Profile
                 <span class="subtitle">
                     
                 </span>
-                <h2>
+                <h1>
                     kita
-                </h2>
-                <h3>
+                </h1>
+                <h2>
                     
-                </h3>
+                </h2>
                 <p class="hero-content">
                     <p>I&rsquo;m developing a game with Unity as KitaLab.<br>
 Here are a few technologies I&rsquo;ve been working with recently :</p>
 <ul>
 <li>Unity</li>
 <li>C#</li>
-<li>ShaderLab</li>
+<li>Shader</li>
 </ul>
 
                 </p>
@@ -287,38 +292,63 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                     <div class="col-auto px-0 h-100"><span>
     
     <span class="px-1">
-        <a href="https://play.google.com/store/apps/developer?id=KitaLab" target="_blank" class="btn social-icon">
+        <a href="https://play.google.com/store/apps/developer?id=KitaLab"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-android"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://kitatas.itch.io/" target="_blank" class="btn social-icon">
+        <a href="https://kitatas.itch.io/"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-itch-io"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://unityroom.com/users/kitatas" target="_blank" class="btn social-icon">
+        <a href="https://play.unity.com/en/user/3dc86557-1d3c-460f-b692-1f92e5ce2029"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fab fa-unity"></i>
+        </a>
+    </span>
+    
+    <span class="px-1">
+        <a href="https://unityroom.com/users/kitatas"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fas fa-door-open"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://github.com/kitatas" target="_blank" class="btn social-icon">
+        <a href="https://github.com/kitatas"
+             target="_blank" 
+            class="btn social-icon"
+        >
             <i class="fab fa-github"></i>
         </a>
     </span>
     
     <span class="px-1">
-        <a href="https://twitter.com/atasfrznnks" target="_blank" class="btn social-icon">
-            <i class="fab fa-twitter"></i>
+        <a href="https://twitter.com/atasfrznnks"
+             target="_blank" 
+            class="btn social-icon"
+        >
+            <i class="fab fa-x-twitter"></i>
         </a>
     </span>
     
 
     
-</span></div>
+</span>
+</div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
@@ -601,7 +631,6 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
 
 
 
-
 <section id="games" class="py-5">
     <div class="container">
         <h3 class="text-center">Games</h3>
@@ -613,13 +642,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/route_invent_puzzle/main.gif" alt="Route.Invent.Puzzle.">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">Route.Invent.Puzzle.</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -659,13 +688,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/comman_dungeon/main.gif" alt="CommanDungeon">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">CommanDungeon</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -705,13 +734,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/shuwake_cork/main.gif" alt="シュウェイクコルク">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">シュウェイクコルク</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -751,13 +780,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/granasd_alime/main.gif" alt="グラナスドアライム">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">グラナスドアライム</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -791,7 +820,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/kakomi_monster/main.gif" alt="Kakomi Monster">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">Kakomi Monster</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -811,13 +840,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/re_golf/main.gif" alt="ReGOLF">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">ReGOLF</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -851,13 +880,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/slot_man/main.gif" alt="SLOT MAN">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">SLOT MAN</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -891,7 +920,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/ferret_forever/main.gif" alt="FerretForever">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">FerretForever</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -931,13 +960,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/puni_flag/main.gif" alt="ぷにフラ">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">ぷにフラ</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -977,13 +1006,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/plus_minus_pp/main.gif" alt="PlusMinus&#43;&#43;">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">PlusMinus&#43;&#43;</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -1017,13 +1046,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/dodzwei/main.gif" alt="Dodzwei!!">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">Dodzwei!!</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -1057,7 +1086,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/push_and_stop/main.gif" alt="Push &amp; Stop">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">Push &amp; Stop</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -1091,13 +1120,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/one_night_castle_battle/main.gif" alt="一夜城バトル">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">一夜城バトル</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -1125,13 +1154,13 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
                         <img class="card-img-top" src="/images/games/huyasu_huyasu/main.gif" alt="フヤスフヤス">
                     </div>
                     <div class="card-body bg-transparent p-3">
-
-
-
-
-
-
-
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <h5 class="card-title bg-transparent mt-1 text-center">フヤスフヤス</h5>
                     </div>
                     <div class="card-footer py-3">
@@ -1218,7 +1247,16 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
         </div>
+        <h4 class="text-center"><a href="/games">and so on...</a></h4>
     </div>
 </section>
 
@@ -1257,8 +1295,10 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             
             
         </div>
+        <h4 class="text-center"><a href="/others">and so on...</a></h4>
     </div>
 </section>
+
 
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -1274,7 +1314,7 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
 </svg>
 
   </div>
-  <footer>
+<footer>
     
  
 
@@ -1291,13 +1331,15 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
 </div><div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-            <div class="pb-2">
-                <a href="https://kitatas.github.io" title="kita&#39;s Profile">
-                    <img alt="Footer logo" src="https://github.com/kitatas.png"
-                        height="40px" width="40px">
-                </a>
-            </div>
-            &copy; 2024  All Rights Reserved
+            
+                <div class="pb-2">
+                    <a href="https://kitatas.github.io" title="kita&#39;s Profile">
+                        <img alt="Footer logo" src="https://github.com/kitatas.png"
+                            height="40px" width="40px">
+                    </a>
+                </div>
+            
+            &copy; 2025  All Rights Reserved
             <div class="text-secondary">
                 Made with
                 <span class="text-danger">
@@ -1311,7 +1353,9 @@ Here are a few technologies I&rsquo;ve been working with recently :</p>
             </div>
         </div>
     </div>
-</div></footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</div>
+</footer>
+<script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
